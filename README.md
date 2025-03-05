@@ -1,1 +1,1 @@
-# Caching Proxy 🌵
+# Caching Proxy ⚡

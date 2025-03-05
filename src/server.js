@@ -14,8 +14,6 @@ export const startProxyServer = (port, url) => {
     try {
       const newUrl = url + req.originalUrl;
 
-      if (newUrl.includes("favicon.ico")) return next();
-
       if (cache[newUrl]) {
         res.setHeader("X-Cache", "HIT");
 
@@ -23,6 +21,8 @@ export const startProxyServer = (port, url) => {
         Object.entries(cache[newUrl].headers).forEach(([key, value]) => {
           res.setHeader(key, value);
         });
+
+        // console.log(Object.keys(cache));
 
         console.log("Cached Response ⚡");
         return res.send(cache[newUrl].data);

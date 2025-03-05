@@ -17,9 +17,9 @@ program
   .option("-o, --origin <url>", "choose the origin url to proxy to")
   .option("-c, --clear-cache", "clear the cache")
   .action((options) => {
-    if (!options.port || !options.origin) return program.help();
-
     if (program.clearCache) clearCache();
+
+    if (!options.port || !options.origin) return program.help();
 
     startProxyServer(options.port, options.origin);
   });
