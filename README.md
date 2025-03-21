@@ -87,3 +87,5 @@ $ caching-proxy --clear-cache
 - When a request is made, the server checks if the response for that request exists in the cache.
 - If it does, it returns the cached response with the `X-Cache: HIT` header.
 - If it doesn't, it forwards the request to the origin server, caches the response, and returns it with the `X-Cache: MISS` header.
+
+You can find details of this project [here](https://roadmap.sh/projects/caching-server).
