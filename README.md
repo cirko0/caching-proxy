@@ -63,7 +63,7 @@ The server will start on the specified port and forward requests to the specifie
 
 ### Making Requests
 
-After starting the server, you can make requests to the proxy server:
+After starting the server, you can make requests to:
 
 ```bash
 $ curl http://localhost:3000
